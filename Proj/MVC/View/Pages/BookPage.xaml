@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.BookPage"
+             Title="">
+    <VerticalStackLayout>
+        <Grid
+            BackgroundColor="Gray"
+            >
+            
+            <Image
+                x:Name="imgBackPhoto"
+                MinimumHeightRequest="200"
+                MinimumWidthRequest="200"
+                MaximumHeightRequest="400"
+                MaximumWidthRequest="400"
+                BackgroundColor="White"
+                Source="dotnet_bot.png"
+                Aspect="AspectFit"
+            ></Image>
+            <Button
+                Text="Назад"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                BackgroundColor="Black"
+                Clicked="Back_Clicked"
+                />
+        </Grid>
+        
+
+            <!--Сделать подгрузку фото из базы-->
+
+            <!--<Label Text="{OnPlatform asdf, WinUI=sdfgdfg, Android=qwerty}">
+        </Label>-->
+        
+
+        <Label
+            x:Name="lblFIO"
+            HorizontalOptions="Center"
+            Text="Название книги"
+            FontSize="32"
+            WidthRequest="300"/>
+
+        <Label
+            x:Name="lblGenres"
+            HorizontalTextAlignment="Start"
+            HorizontalOptions="Start"
+            Text="Жанры"
+            />
+
+        <Label
+        x:Name="lblBIO"
+        Text="Описнаие книги (био)"
+        HorizontalTextAlignment="Start"
+        MinimumHeightRequest="50"
+        MaximumHeightRequest="400"
+        HorizontalOptions="StartAndExpand"
+        
+        />
+
+        <Button
+            Text="Читать"
+            HorizontalOptions="Center"
+            FontSize="20"
+            Clicked="Read_Clicked"
+            />
+
+
+    </VerticalStackLayout>
+</ContentPage>

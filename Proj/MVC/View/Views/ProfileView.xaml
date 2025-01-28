@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proj.MVC.View.Views.ProfileView">
+    <ScrollView>
+        <VerticalStackLayout
+        VerticalOptions="Center"
+        >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>   
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout
+                Grid.Column="0"
+                HorizontalOptions="End"
+                Margin="0,0,20,0"
+                >
+
+                    <Label
+                        Text="Фамилия"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Имя"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Отчество"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Почта"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Телефон"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Пол"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Дата рождения"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        x:Name="lblBIO"
+                        Text="БИО"
+                        HorizontalTextAlignment="End"
+                        IsVisible="false"
+                        />
+
+                </VerticalStackLayout>
+
+                
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    Margin="20,0,0,0"
+                    >
+
+                    <Entry
+                        x:Name="entSurname"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        />
+
+                    <Entry
+                        x:Name="entName"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        />
+
+                    <Entry
+                        x:Name="entSecondName"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        />
+
+                    <Entry
+                        x:Name="entEmail"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        />
+
+                    <Entry
+                        x:Name="entPhone"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        />
+
+                    <Picker
+                        x:Name="pcrIsMale"
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        >
+                        <Picker.Items>
+                            <x:String>Мужской</x:String>
+                            <x:String>Женский</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <DatePicker
+                        x:Name="dpBirthday"
+                        IsEnabled="False"
+                        />
+
+                    <Entry
+                        x:Name="entBIO"
+                        Text=""
+                        HorizontalTextAlignment="Start"
+                        IsEnabled="False"
+                        IsVisible="false"
+                        />
+                </VerticalStackLayout>
+
+            </Grid>
+
+            <Button
+                x:Name="btnChange"
+                Text="Изменить данные"
+                Clicked="Change_Clicked"
+                WidthRequest="350"
+                />
+
+            <Button
+                x:Name="btnSave"
+                Text="Сохранить"
+                Clicked="Save_Clicked"
+                WidthRequest="350"
+                IsEnabled="False"
+                />
+        </VerticalStackLayout>
+
+        </ScrollView>
+</ContentView>

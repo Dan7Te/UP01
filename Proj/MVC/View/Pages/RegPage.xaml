@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.RegPage"
+             Title="">
+    <ScrollView>
+
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="End"
+                    Margin="0,0,20,0"
+                    >
+
+                    <Label
+                        Text="Фамилия*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Имя*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Отчество"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Почта"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Телефон"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Пол*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Дата рождения*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Логин*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Пароль*"
+                        HorizontalTextAlignment="End"
+                        />
+
+                    <Label
+                        Text="Вы автор?"
+                        HorizontalTextAlignment="End"
+                        />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    Margin="20,0,0,0"
+                    >
+
+                    <Entry
+                         x:Name="entSurname"
+                        />
+
+                    <Entry
+                         x:Name="entName"
+                        />
+
+                    <Entry
+                         x:Name="entSecondName"
+                        />
+
+                    <Entry
+                         x:Name="entEmail"
+                        />
+
+                    <Entry
+                         x:Name="entPhone"
+                        />
+
+                    <Picker
+                        x:Name="pcrGender"
+                        >
+                        <Picker.Items>
+                            <x:String>Мужчина</x:String>
+                            <x:String>Женщина</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <DatePicker
+                        x:Name="dpBirthday"
+                        />
+
+                    <Entry
+                        x:Name="entLogin"
+                        />
+
+                    <Entry
+                        x:Name="entPassword"
+                        />
+
+                    <Picker
+                        x:Name="pcrIsAuthor"
+                        >
+                        <Picker.Items>
+                            <x:String>Да</x:String>
+                            <x:String>Нет</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+            
+            </Grid>
+
+            <Button
+                Text="Зарегистрироваться"
+                Clicked="Reg_Clicked"
+                WidthRequest="350"
+                />
+
+            <Button
+                Text="Вернутсья к авторизации"
+                Clicked="Back_Clicked"
+                WidthRequest="350"
+                />
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

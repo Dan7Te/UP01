@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.MainPage"
+             Title="">
+    <Grid
+        x:Name="MainGrid"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Frame x:Name="MainFrame"/>
+        </Grid>
+
+        <ImageButton
+            Grid.Row="0"
+            x:Name="btnFilters" 
+            Source="filters.png"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="10"
+            HeightRequest="50"
+            WidthRequest="50"
+            IsVisible="False"
+            Clicked="btnFilters_Clicked"
+            BackgroundColor="Beige"
+            />
+
+        <Grid Grid.Row="1">
+            <HorizontalStackLayout HorizontalOptions="{OnPlatform Start, WinUI=Start, Android=Center}">
+                <ImageButton
+                    x:Name="btnHome" 
+                    Source="new_home.png"
+                    HorizontalOptions="{OnPlatform Start, WinUI=Start, Android=Center}"
+                    Margin="10"
+                    WidthRequest="{OnPlatform 120, WinUI=150, Android=50}"
+                    Clicked="btnHome_Clicked"
+                    />
+
+                <ImageButton
+                    x:Name="btnSearch"
+                    Source="search.png"
+                    HorizontalOptions="{OnPlatform Start, WinUI=Start, Android=Center}"
+                    Margin="10"
+                    WidthRequest="{OnPlatform 120, WinUI=150, Android=50}"
+                    Clicked="btnSearch_Clicked"
+                    />
+
+                <ImageButton
+                    x:Name="btnProfile"
+                    Source="profile.png"
+                    HorizontalOptions="{OnPlatform Start, WinUI=Start, Android=Center}"
+                    Margin="10"
+                    WidthRequest="{OnPlatform 120, WinUI=150, Android=50}"
+                    Clicked="btnProfile_Clicked"
+                    />
+            </HorizontalStackLayout>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

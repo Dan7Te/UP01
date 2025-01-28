@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.AuthPage"
+             Title="">
+    <Grid>
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            >
+            <Grid
+                HorizontalOptions="Center"
+                VerticalOptions="Center"    
+            >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout
+                    Grid.Column="0"
+                    >
+                    <Label
+                        Text="Логин"
+                        HorizontalOptions="Center"
+                        VerticalTextAlignment="Center"
+                    />
+
+                    <Label
+                        Text="Пароль"
+                        HorizontalOptions="Center"
+                        
+                    />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    >
+                    <Entry
+                        x:Name="entLogin"     
+                    />
+
+                    <Entry
+                        x:Name="entPassword" 
+                        IsPassword="True"
+                    />
+                </VerticalStackLayout>
+
+            </Grid>
+            <Button
+                Text="Авторизоваться" 
+                WidthRequest="220"
+                Margin="5,20,5,5"
+                Clicked="Button_Clicked"
+                />
+
+            <Button
+                Text="Зарегистрироватсья"
+                HeightRequest="50"
+                WidthRequest="220"
+                Clicked="Button_Clicked_1"
+                />
+
+            <!--<Label
+                HeightRequest="50"
+                WidthRequest="220"
+                >
+
+            
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span>Нет Аккаунта? -</Span>
+                        <Span
+                            Text=" Зарегистрируйся в нашем приложении"
+                            TextColor="Blue"
+                            >
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Tapped="TapGestureRecognizer_Tapped"
+                                />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>-->
+        </VerticalStackLayout>
+        
+        
+    </Grid>
+</ContentPage>

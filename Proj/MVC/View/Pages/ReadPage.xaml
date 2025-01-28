@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.ReadPage"
+             Title="">
+    <VerticalStackLayout>
+        <Grid 
+            BackgroundColor="Gray" 
+            WidthRequest="200"
+            Margin="10"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="230"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                x:Name="lblBookName"
+                Padding="0"
+                HorizontalOptions="Center"
+                />
+
+            <Grid
+                Grid.Row="1"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.Row="0"
+                    x:Name="imgBook"
+                    WidthRequest="200"
+                    HeightRequest="200" 
+                    HorizontalOptions="Center"
+                    >
+                </Image>
+
+                <Grid 
+                    Grid.Row="1"
+                    >
+                    <Label
+                        x:Name="lblAuthor"
+                        Padding="0"
+                        VerticalOptions="Start"
+                        HeightRequest="20"
+                        WidthRequest="100"
+                        HorizontalOptions="Start"
+                        />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Label
+            x:Name="lblDescription"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            WidthRequest="400"
+            MaximumHeightRequest="200"
+            />
+
+        <Button
+            x:Name="btnSelection"
+            Text="Добавить в избранное"
+            WidthRequest="300"
+            Clicked="Button_Clicked"
+            />
+    </VerticalStackLayout>
+</ContentPage>

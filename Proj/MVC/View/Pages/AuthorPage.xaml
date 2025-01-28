@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Telpis_221_UP_1.MVC.View.Pages.AuthorPage"
+             Title="">
+    <VerticalStackLayout>
+        <Grid>
+            <Image
+                x:Name="imgBackPhoto"
+                HeightRequest="100"
+                BackgroundColor="White"
+                Source="dotnet_bot.png"
+                >
+            
+                <!--Сделать подгрузку фото из базы-->
+            
+                <!--<Label Text="{OnPlatform asdf, WinUI=sdfgdfg, Android=qwerty}">
+                </Label>--> 
+            </Image>
+            
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                x:Name="imgPhoto"
+                HeightRequest="100"
+                WidthRequest="100"
+                Background="Aquamarine"
+                HorizontalOptions="Start"
+                Margin="10"
+                Grid.Column="0"
+                Source="dotnet_bot.png"
+                >
+            
+            </Image>
+
+            <Label
+                x:Name="lblFIO"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                Text="ФИО атвора"
+                FontSize="32"
+                WidthRequest="300"
+                />
+
+        </Grid>
+
+        <Label
+            x:Name="lblBIO"
+            Text="Описнаие автора (био)"
+            HorizontalTextAlignment="Start"
+            MinimumHeightRequest="50"
+            MaximumHeightRequest="400"
+            HorizontalOptions="StartAndExpand"
+            
+            />
+
+        <Label
+            Text="Книги"
+            HorizontalOptions="Start"
+            FontSize="20"
+            />
+        
+        <ScrollView Orientation="Horizontal">
+            <HorizontalStackLayout>
+                <!--
+                    Воткнуть книги автора и сделать шаблон объектов
+                -->
+                
+                <Grid 
+                    BackgroundColor="Aqua"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Margin="10"
+                    ></Grid>
+                <Grid 
+                    BackgroundColor="Red"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Margin="10"
+                    ></Grid>
+                <Grid 
+                    BackgroundColor="Gray"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Margin="10"
+                    ></Grid>
+                <Grid 
+                    BackgroundColor="Green"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Margin="10"
+                    ></Grid>
+                <Grid 
+                    BackgroundColor="Yellow"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Margin="10"
+                    ></Grid>        
+                
+            </HorizontalStackLayout>
+        </ScrollView>
+        
+    </VerticalStackLayout>
+</ContentPage>

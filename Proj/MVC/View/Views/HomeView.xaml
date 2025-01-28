@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proj.MVC.View.Views.HomeView">
+    
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Label 
+                Text="Вы читаете:"
+                HorizontalOptions="Start"
+                />
+
+            <!--<HorizontalStackLayout
+                HeightRequest="310"
+                FlowDirection="LeftToRight"
+                BackgroundColor="Beige"
+                >-->
+                <CollectionView 
+                    x:Name="lvBooks"
+                    HeightRequest="310"
+                    BackgroundColor="Beige"
+                    >
+                    <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                        <!--<ViewCell>-->
+                        <VerticalStackLayout>
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding .}"/>
+                            </VerticalStackLayout.GestureRecognizers>
+                                <Grid 
+                                    BackgroundColor="Gray" 
+                                    WidthRequest="200"
+                                    Margin="10"
+                                    >
+                                    
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="230"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Text="{Binding BookName}"
+                                        Padding="0"
+                                        HorizontalOptions="Center"
+                                        />
+
+                                    <Grid
+                                        Grid.Row="1"
+                                        >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="200"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Image
+                                            Grid.Row="0"
+                                            WidthRequest="200"
+                                            HeightRequest="200" 
+                                            HorizontalOptions="Center"
+                                            Source="{Binding Photo}"
+                                            >
+                                        
+                                        </Image>
+
+                                        <Grid 
+                                            Grid.Row="1"
+                                            >
+                                            <Label
+                                                Text="{Binding Author.AuthorSurname}"
+                                                Padding="0"
+                                                VerticalOptions="Start"
+                                                HeightRequest="20"
+                                                WidthRequest="100"
+                                                HorizontalOptions="Start"
+                                                />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </VerticalStackLayout>
+                            <!--</ViewCell>-->
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            <!--</HorizontalStackLayout>-->
+
+            <Label
+                x:Name="lblFavGenres"
+                Text="Любимые жанры:"
+                HorizontalOptions="Start"
+                />
+
+            <Label
+                x:Name="lblFavAuthors"
+                Text="Любимые писатели:"
+                HorizontalOptions="Start"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentView>
